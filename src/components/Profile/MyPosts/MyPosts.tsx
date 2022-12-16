@@ -13,7 +13,8 @@ export const MyPosts = () => {
                 </button>
             </div>
             <div className={s.posts}>
-                <Post/>
+                <Post message={"Hi, how are you?"} like={15}/>
+                <Post message={"It's my first post."} like={21}/>
             </div>
         </div>)
 }
