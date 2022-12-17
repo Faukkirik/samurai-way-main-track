@@ -3,22 +3,27 @@
     /*grid-template-rows: 60px 1fr;*/
     grid-template-columns: 2fr 10fr;
     /*grid-gap: 10px;*/
+
 }
 
 .dialogsItems .dialog {
+
     padding: 10px;
     font-size: 100%;
     font-weight: 600;
     color: #414040;
+
 }
 .dialogsItems .active{
 color: black;
     font-size: 100%;
     font-weight: 700;
+
 }
 
 .messages {
     padding: 10px;
+
 }
 
 .message {
