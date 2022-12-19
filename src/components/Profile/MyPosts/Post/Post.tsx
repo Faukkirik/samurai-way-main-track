@@ -4,6 +4,7 @@ import {message} from "antd";
 
 
 type PropsTypeMessage = {
+    id: number
     message: string
     like: number
 }
