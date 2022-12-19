@@ -1,30 +1,15 @@
 import React from "react";
 import s from './Dialogs.module.css';
 import {NavLink} from "react-router-dom";
+import {DialogItem, PropsTypeUsers} from "./DialogsItem/DialogsItem";
+import {Message, PropsTypeMessage} from "./Messages/Messages";
 
-type PropsTypeUsers = {
-    id: number;
-    name: string;
-}
-type PropsTypeMessage = {
-    id?: number
-    message: string;
-}
-const DialogItem = (props: PropsTypeUsers) => {
-    let path = "/dialogs/" + props.id;
-    return (
-        <div className={s.dialog + ' ' + s.active}>
-            <NavLink to={path} activeClassName={s.active}>{props.name}</NavLink>
-        </div>
-    )
-}
 
-const Message = (props: PropsTypeMessage) => {
-    return (
-        <div className={s.dialog}>{props.message}</div>
-    )
+type PropsTypeDialogs = {
+    dialog: Array<PropsTypeUsers>
+    message: Array<PropsTypeMessage>
 }
-export const Dialogs = (props: PropsTypeUsers ) => {
+export const Dialogs = (props: PropsTypeDialogs ) => {
     let dialogsData = [
         {id: 1, name: "Женя"},
         {id: 2, name: "Даник"},
