@@ -6,8 +6,8 @@ import {Message, PropsTypeMessage} from "./Messages/Messages";
 
 
 type PropsTypeDialogs = {
-    dialog: Array<PropsTypeUsers>
-    message: Array<PropsTypeMessage>
+    dialog?: Array<PropsTypeUsers>
+    message?: Array<PropsTypeMessage>
 }
 export const Dialogs = (props: PropsTypeDialogs ) => {
     let dialogsData = [
