@@ -3,19 +3,11 @@ import s from './MyPosts.module.css';
 import {Post} from "./Post/Post";
 
 
-/*type PropsTypePostData = {
-    id?: number
-    message: string
-    like: number
-}*/
-export const MyPosts = (/*props: PropsTypePostData*/) => {
-    let postData = [
-        {id: 1, message: "Hi, how are you?", like: 11},
-        {id: 2, message: "It's my first post.", like: 27},
-        {id: 3, message: "Oh, nooo.", like: 21},
-    ]
-    let postsElements = postData.map((post) => {
-        return (<Post message={post.message} like={post.like} id={post.id}/>)
+
+export const MyPosts = (props:any) => {
+
+    let postsElements = props.postData.map((posts: any) => {
+        return (<Post message={posts.message} like={posts.like} id={posts.id}/>)
     })
     return (
         <div className={s.postsBlock}>

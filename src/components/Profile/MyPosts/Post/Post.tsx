@@ -3,12 +3,12 @@ import s from './Post.module.css';
 import {message} from "antd";
 
 
-type PropsTypeMessage = {
-    id: number
-    message: string
-    like: number
-}
-export const Post = (props: PropsTypeMessage) => {
+// type PropsTypeMessage = {
+//     id: number
+//     message: string
+//     like: number
+// }
+export const Post = (props: any) => {
     return (
         <div className={s.posts}>
             <div className={s.item}>
